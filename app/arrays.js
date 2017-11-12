@@ -1,7 +1,7 @@
 arraysAnswers = {
   /**
    * Find the 0 based index of item in arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to find in arr
    * @returns {Number} The index of item in arr, or -1 if item is not in arr.
@@ -23,7 +23,7 @@ arraysAnswers = {
 
   /**
    * Determine the sum of the items of arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @returns {Number} The numerical sum of all items in arr.
    */
@@ -40,8 +40,8 @@ arraysAnswers = {
   },
 
   /**
-   * Create a new array with the same items as arr, excluding item 
-   * 
+   * Create a new array with the same items as arr, excluding item
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to be excluded from the new array
    * @returns {Number[]} A new array containing all numbers from arr except item.
@@ -62,7 +62,7 @@ arraysAnswers = {
 
   /**
    * Adds a number, item, to the end of an array, arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to be appended to the end of arr
    * @returns {Number[]} The array arr, with item appended.
@@ -74,7 +74,7 @@ arraysAnswers = {
 
   /**
    * Removes a number, item, from the end of an array, arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} The array arr, with the last element removed..
    */
@@ -85,7 +85,7 @@ arraysAnswers = {
 
   /**
    * Adds a number, item, to the beginning of an array arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to append to the beginning of arr.
    * @returns {Number[]} The array arr, with the first element item added
@@ -97,7 +97,7 @@ arraysAnswers = {
 
   /**
    * Removes the first element from an array
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} The array arr, with the first element item removed.
    */
@@ -108,7 +108,7 @@ arraysAnswers = {
 
   /**
    * Combines the two arrays arr1 and arr2 together
-   * 
+   *
    * @param {Number[]} arr1 - An array of numbers
    * @param {Number[]} arr2 - An array of numbers
    * @returns {Number[]} A new array, with elements from arr1 and arr2 in that order.
@@ -124,7 +124,7 @@ arraysAnswers = {
 
   /**
    * Insert a number item into an array arr at the 0 based position index.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to be inerted into arr
    * @param {Number} index - A 0 based index into the array arr.
@@ -139,7 +139,7 @@ arraysAnswers = {
 
   /**
    * Counts the number of times a number item appears in an array arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} item - A number to count in arr
    * @returns {Number} The count of the number of times the number item appeared in arr.
@@ -157,7 +157,7 @@ arraysAnswers = {
 
   /**
    * Determines the number of duplicated numbers in the array arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} An array of numbers that appear in arr more than once.
    */
@@ -178,7 +178,7 @@ arraysAnswers = {
 
   /**
    * Squares each number in an array arr. Example: square([1, 2, 3]) returns [1, 4, 9].
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} A new array of numbers that contains the elements of arr squared.
    */
@@ -192,10 +192,18 @@ arraysAnswers = {
 
   /**
    * Finds the indices of the occurrences of a number target in an array of numbers arr.
-   * 
+   *
    * @param {Number[]} arr - An array of numbers
    * @param {Number} target - A number to find all occurences of.
    * @returns {Number[]} A new array of numbers which represent the indices of target in arr.
    */
-  findAllOccurrences: function findAllOccurrences(arr, target) {}
+  findAllOccurrences: function findAllOccurrences(arr, target) {
+    const occurences = [];
+    for (let i = 0; i < arr.length; i += 1) {
+      if (arr[i] === target) {
+        occurences.push(i);
+      }
+    }
+    return occurences;
+  },
 };

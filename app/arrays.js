@@ -131,7 +131,12 @@ arraysAnswers = {
    * @param {Number} index - A 0 based index into the array arr.
    * @returns {Number[]} The array arr, with the number item inserted at position index.
    */
-  insert: function insert(arr, item, index) {},
+  insert: function insert(arr, item, index) {
+    // array.splice(start, deleteCount, item1, item2, ...)
+    // index = 2, item = "z"
+    arr.splice(index, 0, item);
+    return arr; // [1, 2, "z", 3, 4]
+  },
 
   /**
    * Counts the number of times a number item appears in an array arr.

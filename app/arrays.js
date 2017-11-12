@@ -91,7 +91,10 @@ arraysAnswers = {
    * @param {Number} item - A number to append to the beginning of arr.
    * @returns {Number[]} The array arr, with the first element item added
    */
-  prepend: function prepend(arr, item) {},
+  prepend: function prepend(arr, item) {
+    arr.unshift(item);
+    return arr;
+  },
 
   /**
    * Removes the first element from an array

@@ -79,7 +79,10 @@ arraysAnswers = {
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} The array arr, with the last element removed..
    */
-  truncate: function truncate(arr) {},
+  truncate: function truncate(arr) {
+    arr.pop();
+    return arr;
+  },
 
   /**
    * Adds a number, item, to the beginning of an array arr.

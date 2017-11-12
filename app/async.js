@@ -25,5 +25,19 @@ asyncAnswers = {
    * @param {String} url - a valid url
    * @returns {then: function} A promise like object containing a then property.
    */
-  manipulateRemoteData: function manipulateRemoteData(url) {}
+  manipulateRemoteData: function manipulateRemoteData(url) {
+    return new Promise(((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.onload = function () {
+        if (xhr.status === 200) resolve(xhr.response);
+        else reject(Error(xhr.statusText));
+      };
+      xhr.send();
+    })).then((response) => {
+      const data = JSON.parse(response).people;
+      return data.map(key => key.name).sort();
+    });
+  },
+  
 };

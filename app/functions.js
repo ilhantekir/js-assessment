@@ -27,6 +27,8 @@ functionsAnswers = {
    * that begins with str + ', ' + that 1 argument.
    */
   functionFunction: function functionFunction(str) {
-
+    return function(s) {
+      return str + ', ' + s;
+    };
   },
 };

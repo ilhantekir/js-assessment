@@ -47,7 +47,6 @@ arraysAnswers = {
    * @returns {Number[]} A new array containing all numbers from arr except item.
    */
   remove: function remove(arr, item) {
-
     let newArray = [];
     newArray = arr.filter(e => e !== item);
     return newArray;
@@ -145,7 +144,16 @@ arraysAnswers = {
    * @param {Number} item - A number to count in arr
    * @returns {Number} The count of the number of times the number item appeared in arr.
    */
-  count: function count(arr, item) {},
+  count: function count(arr, item) {
+    // arr = [1, 2, 4, 4, 3, 4, 3], item = 4
+    let counter = 0;
+    for (let i = 0; i < arr.length; i += 1) {
+      if (arr[i] === item) {
+        counter += 1;
+      }
+    }
+    return counter;// 3
+  },
 
   /**
    * Determines the number of duplicated numbers in the array arr.

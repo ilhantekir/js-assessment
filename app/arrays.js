@@ -46,7 +46,20 @@ arraysAnswers = {
    * @param {Number} item - A number to be excluded from the new array
    * @returns {Number[]} A new array containing all numbers from arr except item.
    */
-  remove: function remove(arr, item) {},
+  remove: function remove(arr, item) {
+
+    let newArray = [];
+    newArray = arr.filter(e => e !== item);
+    return newArray;
+    // or the other solution way
+    // for (let i = 0; i < arr.length; i += 1) { // https://eslint.org/docs/rules/no-plusplus
+    //   if (arr[i] === item) {
+    //     arr.splice(i, 1);
+    //     i -= 1;
+    //   }
+    // }
+    // return arr;
+  },
 
   /**
    * Adds a number, item, to the end of an array, arr.

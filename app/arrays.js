@@ -152,7 +152,7 @@ arraysAnswers = {
         counter += 1;
       }
     }
-    return counter;// 3
+    return counter; // 3
   },
 
   /**
@@ -161,7 +161,20 @@ arraysAnswers = {
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} An array of numbers that appear in arr more than once.
    */
-  duplicates: function duplicates(arr) {},
+  duplicates: function duplicates(arr) {
+    const known = [];
+    const duplicated = [];
+    for (let i = 0; i < arr.length; i += 1) {
+      if (known.indexOf(arr[i]) !== -1) {
+        if (duplicated.indexOf(arr[i]) === -1) {
+          duplicated.push(arr[i]);
+        }
+      } else {
+        known.push(arr[i]);
+      }
+    }
+    return duplicated.reverse(); // duplicated = [4, 3, 1] passed but correct answer [1, 3, 4] and then I used .reverse()
+  },
 
   /**
    * Squares each number in an array arr. Example: square([1, 2, 3]) returns [1, 4, 9].

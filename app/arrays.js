@@ -59,7 +59,6 @@ arraysAnswers = {
     // }
     // return arr;
   },
-
   /**
    * Adds a number, item, to the end of an array, arr.
    *
@@ -205,5 +204,14 @@ arraysAnswers = {
       }
     }
     return occurences;
+  },
+  removeWithoutCopy(arr, item) {
+    for (let i = 0; i < arr.length; i += 1) {
+      if (arr[i] === item) {
+        arr.splice(i, 1);
+        i -= 1;
+      }
+    }
+    return arr;
   },
 };

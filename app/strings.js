@@ -10,7 +10,8 @@ stringsAnswers = {
    * @returns {String} A string with no more than amount number of repeated letters.
    */
   reduceString: function reduceString(str, amount) {
-
+    const regex = new RegExp(`(.)(?=\\1{${amount}})`, 'g');
+    return str.replace(regex, '');
   },
 
   /**

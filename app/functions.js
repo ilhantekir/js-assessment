@@ -10,7 +10,7 @@ functionsAnswers = {
    * @returns Whatever fn would return
    */
   argsAsArray: function argsAsArray(fn, arr) {
-
+    return fn.apply(fn, arr);
   },
 
   /**

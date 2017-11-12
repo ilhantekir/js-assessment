@@ -7,7 +7,12 @@ asyncAnswers = {
    * @returns {then: function} A promise like object containing a then property.
    */
   async: function async(value) {
-
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(value);
+      }, 20);
+    });
   },
 
   /**
@@ -20,7 +25,5 @@ asyncAnswers = {
    * @param {String} url - a valid url
    * @returns {then: function} A promise like object containing a then property.
    */
-  manipulateRemoteData: function manipulateRemoteData(url) {
-
-  },
+  manipulateRemoteData: function manipulateRemoteData(url) {}
 };

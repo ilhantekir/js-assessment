@@ -27,7 +27,17 @@ arraysAnswers = {
    * @param {Number[]} arr - An array of numbers
    * @returns {Number} The numerical sum of all items in arr.
    */
-  sum: function sum(arr) {},
+  sum: function sum(arr) {
+    let totalItem = 0;
+    for (let i = 0; i < arr.length; i += 1) {
+      totalItem += arr[i];
+    }
+    return totalItem;
+    // or the other solution way => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=a
+    // return arr.reduce(function(prev, current){
+    //   return prev + current;
+    // });
+  },
 
   /**
    * Create a new array with the same items as arr, excluding item 

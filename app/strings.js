@@ -23,6 +23,6 @@ stringsAnswers = {
    * @returns {String} The original string of text str reversed.
    */
   reverseString: function reverseString(str) {
-
+    return str.split('').reverse().join('');
   },
 };

@@ -114,7 +114,14 @@ arraysAnswers = {
    * @param {Number[]} arr2 - An array of numbers
    * @returns {Number[]} A new array, with elements from arr1 and arr2 in that order.
    */
-  concat: function concat(arr1, arr2) {},
+  concat: function concat(arr1, arr2) {
+    return arr1.concat(arr2);
+    // or the other solution way
+    // for (let i = 0; i < arr2.length; i += 1) {
+    //   arr1.push(arr2[i]);
+    // }
+    // return arr1;
+  },
 
   /**
    * Insert a number item into an array arr at the 0 based position index.

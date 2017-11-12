@@ -16,9 +16,7 @@ recursionAnswers = {
    * 
    * @returns {Number[]} The files under the directory dirName, including subdiretories.
    */
-  listFiles: function listFiles(data, dirName) {
-
-  },
+  listFiles: function listFiles(data, dirName) {},
 
   /**
    * Determines the fibonacci number at position n.
@@ -30,6 +28,12 @@ recursionAnswers = {
    * @returns {Number} The nth fibonacci number
    */
   fibonacci: function fibonacci(n) {
-
-  },
+    if (n < 1) {
+      return 0;
+    }
+    if (n <= 2) {
+      return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
 };

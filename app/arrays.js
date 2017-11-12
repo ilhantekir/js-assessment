@@ -102,7 +102,10 @@ arraysAnswers = {
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} The array arr, with the first element item removed.
    */
-  curtail: function curtail(arr) {},
+  curtail: function curtail(arr) {
+    arr.shift(arr);
+    return arr;
+  },
 
   /**
    * Combines the two arrays arr1 and arr2 together

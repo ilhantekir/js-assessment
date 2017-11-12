@@ -182,7 +182,13 @@ arraysAnswers = {
    * @param {Number[]} arr - An array of numbers
    * @returns {Number[]} A new array of numbers that contains the elements of arr squared.
    */
-  square: function square(arr) {},
+  square: function square(arr) {
+    const sq = [];
+    for (let i = 0; i < arr.length; i += 1) {
+      sq.push(arr[i] * arr[i]);
+    }
+    return sq;
+  },
 
   /**
    * Finds the indices of the occurrences of a number target in an array of numbers arr.

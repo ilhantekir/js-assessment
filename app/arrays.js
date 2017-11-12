@@ -68,7 +68,10 @@ arraysAnswers = {
    * @param {Number} item - A number to be appended to the end of arr
    * @returns {Number[]} The array arr, with item appended.
    */
-  append: function append(arr, item) {},
+  append: function append(arr, item) {
+    arr.push(item);
+    return arr;
+  },
 
   /**
    * Removes a number, item, from the end of an array, arr.
